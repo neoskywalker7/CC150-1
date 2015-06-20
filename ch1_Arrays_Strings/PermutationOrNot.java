@@ -5,6 +5,8 @@
 1. case sensitive or not? God vs dog?
 2. whitespace is significant or not?
 assume yes
+SOL 2
+assume the character set was ascii
 */
 public class PermutationJudgeSol {
 	public static boolean permutation1(String s, String t) {
