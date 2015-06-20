@@ -9,4 +9,7 @@ Thus, there are in fact 256 possible unique characters for one char.
 计算机里面所有数都是用补码表示, 负数补码是原码的反码加1
 -127 (11111111) -> 10000000 -> 10000001
 任何⼀一个原码都不可能在转成补码时变成10000000, 人为规定-128
+
+Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+Unicode is a superset of ASCII. Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8. 
 */
