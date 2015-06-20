@@ -14,3 +14,38 @@ Thus, there are in fact 256 possible unique characters for one char.
 Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
 Unicode is a superset of ASCII. Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8. 
 */
+public class UniCharSol {
+	// time O(n) space O(1)
+	public static boolean isUniqueChars1(String str) {
+		if (str.length() > 256) {
+			return false;
+		}
+		
+		boolean[] char_set = new boolean[256];
+		for (int i = 0; i < str.length(); i++) {
+			int val = str.charAt(i);
+			if (char_set[val]) {
+				return false;
+			}
+			char_set[val] = true;
+		}
+		return true;
+	}
+	// time O(n) space more reduced
+	public static boolean isUniqueChars2(String str) {
+		int checker = 0;
+		for (int i = 0; i < str.length(); i++) {
+			int val = str.charAt(i) - 'a';
+			if ((checker & (1 << val)) > 0) {
+				return false;
+			}
+			checker |= (1 << val);
+		}
+		return true;
+    }
+	
+	public static void main(String[] args) {
+		String test = "I love Wuhan City 我爱武汉";
+		System.out.print(isUniqueChars2(test));
+	}
+}
