@@ -2,9 +2,11 @@
 1.8
 */
 /*
- * int indexOf(String str): Returns the index within this string of the first occurrence of the specified substring. 
- * If it does not occur as a substring, -1 is returned.
- */
+int indexOf(int ch): Returns the index within this string of the first occurrence of the specified character or -1 if the character does not occur.
+int indexOf(int ch, int fromIndex): Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index or -1 if the character does not occur.
+int indexOf(String str): Returns the index within this string of the first occurrence of the specified substring. If it does not occur as a substring, -1 is returned.
+int indexOf(String str, int fromIndex): Returns the index within this string of the first occurrence of the specified substring, starting at the specified index. If it does not occur, -1 is returned.
+*/
 public class IsRotationSol {
 	public static boolean isRotation(String s1, String s2) {
 		int len = s1.length();
