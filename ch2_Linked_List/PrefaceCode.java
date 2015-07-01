@@ -1,4 +1,4 @@
-public class BasicOperations {
+public class PrefaceCode {
 	// Creating a Linked List
 	public static class Node {
 		Node next = null;
