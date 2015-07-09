@@ -3,7 +3,7 @@
 */
 /*
 常见错误:
-"if lastNode.next == null; lastNode = null;" 注意lastNode = null代表的是用lastNode指向null, 而lastNode本来就是指向null了
+"if lastNode.next == null; lastNode = null;" 注意lastNode = null代表的是用lastNode指代null, 注意指代和指向不同
 */
 public class Question2_3 {
 	public static boolean deleteNode1(ListNode n) { 
