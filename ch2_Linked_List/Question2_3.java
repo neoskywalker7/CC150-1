@@ -29,6 +29,10 @@ output:
 n2 is null
 01
 */
+/*
+1. In Doubly linked list no need of copying b/c it allows Bidirectinal iteration 
+2. If u need to delete the last node in the list, say the list is 1->2->3 and u had pointer to 3 alone, just create a new node with some dummy value. say the value is zero. now attach it to the list. it becomes 1->2->3->0 now swap the value in dummy node to the node to be deleted (here '3') and now free the memory of the dummy node. hence list becomes 1->2->0.
+*/
 public class Question2_3 {
 	public static boolean deleteNode1(ListNode n) { 
 		if (n == null || n.next == null) {
