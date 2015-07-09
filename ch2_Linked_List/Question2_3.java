@@ -4,6 +4,30 @@
 /*
 常见错误:
 "if lastNode.next == null; lastNode = null;" 注意lastNode = null代表的是用lastNode指代null, 注意指代和指向不同
+n1.next是指向一个内存, 如果n2 ＝ null没有改变内存只是重赋值
+e.g.
+*/
+/*
+public static void main(String[] args) {
+		ListNode n1 = new ListNode(0);
+		ListNode n2 = new ListNode(1);
+		n1.next = n2;
+		n2.next = null;
+		n2 = null;
+		// n1.next = n2;
+		if (n2 == null) {
+			System.out.print("n2 is null" + "\n");
+		}
+		while (n1 != null) {
+			System.out.print(n1.val);
+			n1 = n1.next;
+		}
+	}
+*/
+/*
+output:
+n2 is null
+01
 */
 public class Question2_3 {
 	public static boolean deleteNode1(ListNode n) { 
