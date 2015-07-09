@@ -1,6 +1,10 @@
 /*
 2.3
 */
+/*
+常见错误:
+"if lastNode.next == null; lastNode = null;" 注意lastNode = null代表的是用lastNode指向null, 而lastNode本来就是指向null了
+*/
 public class Question2_3 {
 	public static boolean deleteNode1(ListNode n) { 
 		if (n == null || n.next == null) {
