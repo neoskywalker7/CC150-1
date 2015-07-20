@@ -1,8 +1,22 @@
 /*
 4.4
 */
+/*
+In the average case, for a balanced binary tree
+T(n) = 2T(n/2) + Θ(1);
+Every recursive call gives you two problems of half the size. By master theorem, this would evaluate to T(n) = Θ(n)
+In the worst case, where each node has only one child.
+T(n) = T(n-1) + Θ(1)
+Which evaluates to T(n) = Θ(n)
+*/
+/*
+T(n) = 2T(n / 2) + O(1)
+     = 2(2T(n / 4) + O(1)) + O(1) = 4T(n / 4) + 2O(1)
+     …
+     = nT(1) + nO(1) = O(n)
+*/
 public class Question4_4 {
-	// SOL 1 time O(N log N)
+	// SOL 1 time O(N log N) ? O(N^2)
 	public static int getHeight(TreeNode root) {
 		if (root == null) return 0;
 		return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
