@@ -15,6 +15,13 @@ T(n) = 2T(n / 2) + O(1)
      …
      = nT(1) + nO(1) = O(n)
 */
+/*
+首先如果一个root的树有n个点，求height是O(n) ->每个点走一遍
+然后看第7行主程序，设复杂度的是f(n)，那么有：
+f(n) = 2 * n/2 + 2*f(n/2)  --> 第一个2 * n/2是第10行求两个子树的高度, f(n/2) 是14行的recursion
+      = n + 2 * (2 * n / 4 + 2 * f(n/4))
+      = n + n + 4 * f(n/4) = ... = O(nlogn)
+*/
 public class Question4_4 {
 	// SOL 1 time O(N log N) ? O(N^2)
 	public static int getHeight(TreeNode root) {
