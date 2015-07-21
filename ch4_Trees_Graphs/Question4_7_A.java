@@ -1,9 +1,7 @@
 /*
 4.7
 */
-/*
-SOL 1 time O(P + D)
-*/
+// SOL 1 time O(P + D)
 public class Question4_7_A {
 	public static Project[] findBuildOrder(String[] projects, String[][] dependencies) {
 		Graph graph = buildGraph(projects, dependencies);
