@@ -1,6 +1,9 @@
 /*
 4.7
 */
+/*
+time O(P + D)
+*/
 public class Question4_7_A {
 	public static Project[] findBuildOrder(String[] projects, String[][] dependencies) {
 		Graph graph = buildGraph(projects, dependencies);
