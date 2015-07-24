@@ -1,6 +1,7 @@
 /*
 4.10
 */
+// time O(nm) space O(log(n) + log(m))
 public class Question4_10 {
 	public static boolean containsTree(TreeNode t1, TreeNode t2) {
 		if (t2 == null) {
